@@ -1,4 +1,4 @@
 services:
   netbox:
     ports:
-    - 28881:8080
+      - 28882:8080
