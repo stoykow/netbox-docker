@@ -4,9 +4,7 @@ services:
     ports:
     - 28881:8080
     volumes:
-    - /volume1/docker/netbox:/etc/netbox/config:z,ro
-    - netbox-media-files:/opt/netbox/netbox/media:z,rw
-    - netbox-reports-files:/opt/netbox/netbox/reports:z,rw
-    - netbox-scripts-files:/opt/netbox/netbox/scripts:z,rw
-    healthcheck:
-      retries: 15
+    - /volume1/docker/netbox/config:/etc/netbox/config:z,ro
+    - /volume1/docker/netbox/media:/opt/netbox/netbox/media:z,rw
+    - /volume1/docker/netbox/reports:/opt/netbox/netbox/reports:z,rw
+    - /volume1/docker/netbox/scripts:/opt/netbox/netbox/scripts:z,rw
