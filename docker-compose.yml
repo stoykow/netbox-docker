@@ -15,8 +15,8 @@ services:
     volumes:
       - /volume1/docker/netbox/configuration:/etc/netbox/config:z,ro
       - /volume1/docker/netbox/media:/opt/netbox/netbox/media:rw
-      - /volume1/docker/netbox/reports-files:/opt/netbox/netbox/reports:rw
-      - /volume1/docker/netbox/scripts-files:/opt/netbox/netbox/scripts:rw
+      - /volume1/docker/netbox/reports:/opt/netbox/netbox/reports:rw
+      - /volume1/docker/netbox/scripts:/opt/netbox/netbox/scripts:rw
   netbox-worker:
     <<: *netbox
     depends_on:
