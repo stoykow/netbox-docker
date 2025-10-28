@@ -2,8 +2,3 @@ services:
   netbox:
     ports:
     - 28881:8080
-    volumes:
-    - /volume1/docker/netbox/config:/etc/netbox/config:z,ro
-    - /volume1/docker/netbox/media:/opt/netbox/netbox/media:z,rw
-    - /volume1/docker/netbox/reports:/opt/netbox/netbox/reports:z,rw
-    - /volume1/docker/netbox/scripts:/opt/netbox/netbox/scripts:z,rw
