@@ -13,10 +13,10 @@ services:
       timeout: 3s
       interval: 15s
     volumes:
-      - /volume1/docker/netbox/configuration:/etc/netbox/config:z,ro
-      - /volume1/docker/netbox/media:/opt/netbox/netbox/media:rw
-      - /volume1/docker/netbox/reports:/opt/netbox/netbox/reports:rw
-      - /volume1/docker/netbox/scripts:/opt/netbox/netbox/scripts:rw
+      - ./configuration:/etc/netbox/config:z,ro
+      - netbox-media-files:/opt/netbox/netbox/media:rw
+      - netbox-reports-files:/opt/netbox/netbox/reports:rw
+      - netbox-scripts-files:/opt/netbox/netbox/scripts:rw
   netbox-worker:
     <<: *netbox
     depends_on:
