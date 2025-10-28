@@ -2,9 +2,3 @@ services:
   netbox:
     ports:
       - "28881:8080"
-    volumes:
-      - /volume1/docker/netbox/media:/opt/netbox/netbox/media
-
-  postgres:
-    volumes:
-      - /volume1/docker/netbox/db:/var/lib/postgresql/data
